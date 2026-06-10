@@ -8,3 +8,9 @@ image:
 service:
   type: LoadBalancer
   port: 3130
+
+env:
+  mongodbUri: "mongodb://your-mongo-service:27017/shine"
+  sessionSecret: "change-me"
+  emailUser: "haiderzafar486@gmail.com"
+  emailPass: "Haider@2002"

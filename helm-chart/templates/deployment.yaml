@@ -18,5 +18,14 @@ spec:
         - name: userprofile
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: MONGODB_URI
+              value: {{ .Values.env.mongodbUri | quote }}
+            - name: SESSION_SECRET
+              value: {{ .Values.env.sessionSecret | quote }}
+            - name: EMAIL_USER
+              value: {{ .Values.env.emailUser | quote }}
+            - name: EMAIL_PASS
+              value: {{ .Values.env.emailPass | quote }}
           ports:
             - containerPort: {{ .Values.service.port }}
