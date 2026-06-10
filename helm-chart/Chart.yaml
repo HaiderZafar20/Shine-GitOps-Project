@@ -1,0 +1,6 @@
+apiVersion: v2
+name: shine-retail-app
+description: A plain Helm chart for the Shine retail Node.js application
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
